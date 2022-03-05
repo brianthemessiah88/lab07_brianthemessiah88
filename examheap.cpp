@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
     
     }
     int t = atoi(argv[1]);
-    std::priority_queue<int, std::vector<int>, std::greater<int>> data;
+    std::priority_queue<int, std::vector<int>, std::greater<int> > data;
     Heap h;
     int numvals = 3;
     if (t == 1) {
