@@ -1,12 +1,15 @@
+//heap.cpp
+// Giovanni Gasparini, 3/9/22
+
+
+
 #include "heap.h"
 #include <iostream>
 using namespace std;
 
+
 // Pushes a value into the heap, then ensures
 // the heap is correctly arranged
-
-
-
 void Heap::push(int value) {
    vdata.push_back(value);
   heapify();
@@ -43,12 +46,12 @@ bool Heap::empty() {
   return false;
 }
 
-unsigned int Heap::min_child(unsigned int index) const
+int Heap::min_child(int value) const
 {
-   int left = 2 * index;
-   int right = 2 * index + 1;
+   int left = 2 * value;
+   int right = 2 * value + 1;
    int len = vdata.size();
-   if ((left <= len) && (right <= len)){
+   if ((right <= len) && (left <= len)){
      if ((vdata[left - 1]) > (vdata[right- 1])){
        return right - 1;
      }

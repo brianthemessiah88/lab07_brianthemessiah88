@@ -1,6 +1,6 @@
 // heap.h
 // Binary heap tree header file for CS 24 lab
-// Diba Mirza
+// Giovanni Gasparini, 3/9/22
 
 #ifndef HEAP_H
 #define HEAP_H
@@ -15,7 +15,7 @@ class Heap{
     void pop(); // delete the min element 
     int top();
     bool empty();
-    unsigned int min_child(unsigned int index) const;
+    int min_child(int value) const;
     void heapify();
  private:
     std::vector<int> vdata; //store the binary heap tree as a dynamic array
